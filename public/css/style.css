@@ -1,0 +1,116 @@
+/* ==================================================
+   Folha de estilos pública organizada para legibilidade
+   Seções: variáveis, reset/base, layout/cabeçalho,
+   grid/cards, formulários/botões, tabelas, utilitários
+   ==================================================*/
+
+:root {
+  /* Paleta de cores e tokens */
+  --bg: #f7f9fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-600: #1e40af;
+  --border: #e6e9ef;
+}
+
+/* ------------------ Reset / Base ------------------ */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  line-height: 1.4;
+  color: #0f172a;
+  background: var(--bg);
+}
+
+.container {
+  max-width: 980px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+
+.muted { color: var(--muted); font-size: 14px; }
+
+/* ------------------ Layout / Cabeçalho ------------------ */
+/* Fundo e espaçamento do cabeçalho principal */
+.site-header {
+  background: linear-gradient(90deg, #ffffff99, #f3f4f6);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 16px;
+}
+.site-header h1 { margin: 0; font-size: 20px; }
+
+/* ------------------ Grid & Cards ------------------ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(2,6,23,0.03);
+}
+.card h2 { margin: 0 0 8px; font-size: 16px; }
+
+/* ------------------ Formulários / Inputs ------------------ */
+/* Estilos padrão para labels e campos de formulário */
+label { display: block; font-size: 13px; color: var(--muted); margin: 10px 0 6px; }
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e9ef;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* ------------------ Botões ------------------ */
+/* Classe base e variação principal */
+.btn {
+  display: block;
+  width: fit-content;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: #fff;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 auto;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn:hover { opacity: 0.95; }
+
+/* ------------------ Tabelas ------------------ */
+/* Estilo simples e legível para tabelas de dados */
+.table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.table th, 
+.table td { padding: 10px; border-bottom: 1px solid #f1f5f9; text-align: left; }
+
+/* ------------------ Utilitários / Footer ------------------ */
+.footer { 
+    padding: 18px 0; 
+    color: var(--muted); 
+    font-size: 13px; 
+    text-align: center; 
+}
+
+/* ------------------ Ajustes responsivos ------------------ */
+@media (max-width: 420px) {
+  .site-header 
+  .container { flex-direction: column; align-items: flex-start; }
+  .container { margin: 12px auto; }
+}

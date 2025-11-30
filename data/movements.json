@@ -1,0 +1,26 @@
+[
+    {
+        "id": "mov_692bbbe2c51ac0.29703127",
+        "codigoProduto": 101,
+        "descricao": "teste",
+        "quantidade": 20,
+        "final_estoque": 170,
+        "data": "2025-11-30 03:37:06"
+    },
+    {
+        "id": "mov_692bc2495a0383.17012375",
+        "codigoProduto": 120,
+        "descricao": "teste",
+        "quantidade": 20,
+        "final_estoque": 30,
+        "data": "2025-11-30 04:04:25"
+    },
+    {
+        "id": "mov_692bc259db3810.69247962",
+        "codigoProduto": 120,
+        "descricao": "teste remoção",
+        "quantidade": -30,
+        "final_estoque": 0,
+        "data": "2025-11-30 04:04:41"
+    }
+]

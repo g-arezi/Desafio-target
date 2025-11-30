@@ -1,0 +1,10 @@
+{
+  "name": "desafio/project",
+  "description": "Desafio Target",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "require": {}
+}
