@@ -158,6 +158,7 @@ class InventoryService
             }
         }
 
+
         if ($foundKey === null) {
             throw new \InvalidArgumentException('Produto não encontrado: ' . $codigoProduto);
         }
@@ -167,6 +168,20 @@ class InventoryService
         // remove do array e salva
         array_splice($stock, $foundKey, 1);
         $this->saveStock($stock);
+        // se estiver sendo executado via servidor web, redireciona para atualizar a página
+        if (php_sapi_name() !== 'cli') {
+            if (!headers_sent()) {
+                $redirect = $_SERVER['HTTP_REFERER'] ?? ($_SERVER['REQUEST_URI'] ?? null);
+                if ($redirect) {
+                    header('Location: ' . $redirect);
+                    exit;
+                }
+            } else {
+                // quando headers já foram enviados, usa JS para recarregar
+                echo '<script>window.location.reload();</script>';
+                exit;
+            }
+        }
 
         return $removed;
     }
