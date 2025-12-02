@@ -27,7 +27,7 @@ $estoque = json_decode(file_get_contents(__DIR__ . '/../data/estoque.json'), tru
             <p class="muted">Calcular comissões a partir do arquivo de vendas.</p>
             <form action="api.php" method="get">
                 <input type="hidden" name="action" value="commissions">
-                <button class="btn" type="submit">Ver comissões</button>
+                <button class="btn btn-primary" type="submit">Ver comissões</button>
             </form>
         </section>
 
