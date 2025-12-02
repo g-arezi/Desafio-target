@@ -24,6 +24,11 @@
             "codigoProduto": 105,
             "descricaoProduto": "Marcador de Texto Amarelo",
             "estoque": 90
+        },
+        {
+            "codigoProduto": 121,
+            "descricaoProduto": "produto teste",
+            "estoque": 10
         }
     ]
 }

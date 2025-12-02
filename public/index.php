@@ -15,6 +15,7 @@ $estoque = json_decode(file_get_contents(__DIR__ . '/../data/estoque.json'), tru
 <body>
 <header class="site-header">
     <div class="container">
+
         <h1>Desafio</h1>
         <div class="muted">Comissões • Movimentação de Estoque • Juros</div>
     </div>

@@ -41,18 +41,20 @@ body {
 }
 .site-header .container {
   display: flex;
-  align-items: center;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
   gap: 12px;
   padding: 18px 16px;
+  margin: 0 auto;
 }
-.site-header h1 { margin: 0; font-size: 20px; }
+.site-header h1 { margin: 0px; font-size: 20px; }
 
 /* ------------------ Grid & Cards ------------------ */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  margin: 18px 0;
+  gap: 10px;
+  margin: 10px 0;
 }
 .card {
   background: var(--card);
